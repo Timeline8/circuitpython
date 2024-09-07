@@ -11,6 +11,10 @@ static const mp_rom_map_elem_t board_module_globals_table[] = {
 
     // Top side of the board - left column
     // (top to bottom, preceded by 5V, GND & 3.3V)
+    // mpconfigboard.h: GPIO0: CIRCUITPY_BOOT_BUTTON
+    { MP_ROM_QSTR(MP_QSTR_BUTTON), MP_ROM_PTR(&pin_GPIO0) },
+    { MP_ROM_QSTR(MP_QSTR_IO0), MP_ROM_PTR(&pin_GPIO0) },
+
     { MP_ROM_QSTR(MP_QSTR_IO1), MP_ROM_PTR(&pin_GPIO1) },
     { MP_ROM_QSTR(MP_QSTR_A0), MP_ROM_PTR(&pin_GPIO1) },
     { MP_ROM_QSTR(MP_QSTR_D1), MP_ROM_PTR(&pin_GPIO1) },
